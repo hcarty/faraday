@@ -117,59 +117,59 @@ val write_uint8 : t -> int -> unit
   (** [write_uint8 t n] copies the lower 8 bits of [n] into the serializer's
       internal buffer. *)
 
+
 (** Big endian serializers *)
-module BE : sig
-  val write_uint16 : t -> int -> unit
-  (** [write_uint16 t n] copies the lower 16 bits of [n] into the serializer's
-      internal buffer in big-endian byte order. *)
 
-  val write_uint32 : t -> int32 -> unit
-  (** [write_uint32 t n] copies [n] into the serializer's internal buffer in
-      big-endian byte order. *)
+val write_uint16_be : t -> int -> unit
+(** [write_uint16_be t n] copies the lower 16 bits of [n] into the serializer's
+    internal buffer in big-endian byte order. *)
 
-  val write_uint48 : t -> int64 -> unit
-  (** [write_uint48 t n] copies the lower 48 bits of [n] into the serializer's
-      internal buffer in big-endian byte order. *)
+val write_uint32_be : t -> int32 -> unit
+(** [write_uint32_be t n] copies [n] into the serializer's internal buffer in
+    big-endian byte order. *)
 
-  val write_uint64 : t -> int64 -> unit
-  (** [write_uint64 t n] copies [n] into the serializer's internal buffer in
-      big-endian byte order. *)
+val write_uint48_be : t -> int64 -> unit
+(** [write_uint48_be t n] copies the lower 48 bits of [n] into the serializer's
+    internal buffer in big-endian byte order. *)
 
-  val write_float : t -> float -> unit
-  (** [write_float t n] copies the lower 32 bits of [n] into the serializer's
-      internal buffer in big-endian byte order. *)
+val write_uint64_be : t -> int64 -> unit
+(** [write_uint64_be t n] copies [n] into the serializer's internal buffer in
+    big-endian byte order. *)
 
-  val write_double : t -> float -> unit
-  (** [write_float t n] copies [n] into the serializer's internal buffer in
-      big-endian byte order. *)
-end
+val write_float_be : t -> float -> unit
+(** [write_float_be t n] copies the lower 32 bits of [n] into the serializer's
+    internal buffer in big-endian byte order. *)
+
+val write_double_be : t -> float -> unit
+(** [write_float_be t n] copies [n] into the serializer's internal buffer in
+    big-endian byte order. *)
+
 
 (** Little endian serializers *)
-module LE : sig
-  val write_uint16 : t -> int -> unit
-  (** [write_uint16 t n] copies the lower 16 bits of [n] into the
-      serializer's internal buffer in little-endian byte order. *)
 
-  val write_uint32 : t -> int32 -> unit
-  (** [write_uint32 t n] copies [n] into the serializer's internal buffer in
-      little-endian byte order. *)
+val write_uint16_le : t -> int -> unit
+(** [write_uint16_le t n] copies the lower 16 bits of [n] into the
+    serializer's internal buffer in little-endian byte order. *)
 
-  val write_uint48 : t -> int64 -> unit
-  (** [write_uint48 t n] copies the lower 48 bits of [n] into the serializer's
-      internal buffer in little-endian byte order. *)
+val write_uint32_le : t -> int32 -> unit
+(** [write_uint32_le t n] copies [n] into the serializer's internal buffer in
+    little-endian byte order. *)
 
-  val write_uint64 : t -> int64 -> unit
-  (** [write_uint64 t n] copies [n] into the serializer's internal buffer in
-      little-endian byte order. *)
+val write_uint48_le : t -> int64 -> unit
+(** [write_uint48_le t n] copies the lower 48 bits of [n] into the serializer's
+    internal buffer in little-endian byte order. *)
 
-  val write_float : t -> float -> unit
-  (** [write_float t n] copies the lower 32 bits of [n] into the serializer's
-      internal buffer in little-endian byte order. *)
+val write_uint64_le : t -> int64 -> unit
+(** [write_uint64_le t n] copies [n] into the serializer's internal buffer in
+    little-endian byte order. *)
 
-  val write_double : t -> float -> unit
-  (** [write_float t n] copies [n] into the serializer's internal buffer in
-      little-endian byte order. *)
-end
+val write_float_le : t -> float -> unit
+(** [write_float_le t n] copies the lower 32 bits of [n] into the serializer's
+    internal buffer in little-endian byte order. *)
+
+val write_double_le : t -> float -> unit
+(** [write_float_le t n] copies [n] into the serializer's internal buffer in
+    little-endian byte order. *)
 
 
 (** {2 Unbuffered Writes} *)
